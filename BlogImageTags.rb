@@ -17,7 +17,7 @@ module BlogImageTags
     def image_tag_init(tag_name, markup, tokens)
         @html    = Liquid::Template.parse("<div class=\"image-container {{class}}\"><p class=\"image-graphic\"><img src=\"{{src}}\" /></p><p class=\"image-caption\">{{caption}}</p></div>")
         @args    = markup.scan(/(?:"(?:\\.|[^"])*"|[^" ])+/)
-        @image     = @args[0] || ""
+        @image   = @args[0] || ""
         @caption = @args[1] || ""
         @caption.sub!(/^\"/,'')
         @caption.sub!(/\"$/,'')

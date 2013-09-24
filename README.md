@@ -28,6 +28,7 @@ Examples:
             <img src="/attachments/{blog_post_name}/images/{image_name}">
         </p>
         <p class="image-caption">
+            Caption Text Here
         </p>
     </div>
 
