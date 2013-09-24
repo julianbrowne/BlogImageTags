@@ -1,0 +1,45 @@
+
+
+img { 
+  border: 0;
+}
+
+.image-container { 
+  position: relative;
+  padding: 5px;
+}
+
+.image-container.image-left { 
+  margin: 5px 5px 5px 50px;
+  float: left;
+  clear: left;
+}
+
+.image-container.image-center {
+  display: block;
+  clear: both;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image-container.image-right { 
+  margin: 0 50px 0 0;
+  float: right;
+  clear: right;
+  margin: 5px 50px 5px 5px;
+}
+
+.image-container .image-graphic {
+    background: #FFFFFF;
+}
+
+.image-container .image-caption { 
+  top: -20px;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 0.9em;
+  text-align: center;
+}
