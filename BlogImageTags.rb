@@ -25,8 +25,9 @@ module BlogImageTags
 
     def image_html(justification, context)
         attachments = context["site"]["attachments_root"]
+        site = context["site"]["site_root"]
         root = context["page"]["url"].split('/').last.sub(/\..*?$/,'')
-        image_url = "#{attachments}/#{root}/images/#{@image}"
+        image_url = "#{site}/#{attachments}/#{root}/images/#{@image}"
         a = @html.render({ 'class' => justification, 'src' => image_url, 'caption' => @caption})
         return a
     end
