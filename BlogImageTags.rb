@@ -27,7 +27,7 @@ module BlogImageTags
         attachments = context["site"]["attachments_root"]
         site = context["site"]["site_root"]
         root = context["page"]["url"].split('/').last.sub(/\..*?$/,'')
-        image_url = "#{site}/#{attachments}/#{root}/images/#{@image}"
+        image_url = "#{site}/#{attachments}/#{root}/images/#{@image}".gsub(/([^:])\/\//, '\1/')
         a = @html.render({ 'class' => justification, 'src' => image_url, 'caption' => @caption})
         return a
     end
